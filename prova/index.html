@@ -1,0 +1,98 @@
+<!doctype html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>prova</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <style>
+        footer {
+            background-color: rgb(0, 0, 0);
+            margin: 20px 20px 20px 20px;
+            font-family: Arial;
+            padding: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Cabeçalho</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <aside class="aside1">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor lectus tellus, vitae iaculis
+                nibh ultricies at. Pellentesque aliquam velit nec porta commodo. Vivamus venenatis turpis vel auctor
+                pulvinar. Phasellus molestie, leo id placerat fringilla, enim nunc elementum eros, sed imperdiet nisi
+                nulla pharetra dolor. Nam auctor elit sapien, vitae blandit sem viverra ornare. Cras arcu metus,
+                tincidunt eget lorem id, mattis malesuada nulla. Vivamus semper pulvinar eros, a vehicula orci
+                scelerisque ac. Sed eget iaculis ligula. Donec ultrices laoreet tortor, eget malesuada felis.
+                Pellentesque varius sagittis lectus non elementum.
+            </p>
+        </aside>
+        <article class="article1">
+            <section class="subSection1">
+                <table>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="subSection2">subSection2</section>
+            <section class="subSection3">subSection3</section>
+            <section class="subSection4">subSection4</section>
+        </article>
+        <article class="article2">
+            <section style="background-color: rgb(255, 255, 255); object-fit: contain;">
+                <img class= "esquerda" src = "img/esquerda.png" width="500px">
+            </section>
+            <h2 style="display: flex; align-items: center;">Clique nas Setas</h2>
+            <aside style="background-color: rgb(255, 255, 255); object-fit: contain;">
+                <img class = "direita" src="img/direita.png" width="500px">
+            </aside>
+        </article>
+        <footer><h1>rodapé</h1></footer>
+    </main>
+
+    <script>
+        window.onload = function () {
+            aside1 = document.querySelector('.aside1');
+            nav = document.querySelector('nav');
+
+            aside1Height = aside1.offsetHeight;
+
+            nav.style.height = aside1Height + 'px';
+
+            esquerda = document.querySelector('.esquerda');
+            direita = document.querySelector('.direita');
+
+            esquerda.addEventListener('click', function () {
+                alert('Esquerda');
+            });
+            direita.addEventListener('click', function () {
+                alert('Direita');
+            });
+        };
+    </script>
+</body>
+
+</html>
